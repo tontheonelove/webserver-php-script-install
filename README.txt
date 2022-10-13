@@ -6,6 +6,9 @@
 #sudo service apache2 start
 #sudo systemctl enable apache2
 
+****** Install php ******
+#sudo apt install libapache2-mod-php php-common php-bcmath php-mbstring php-mysql php-tokenizer php-zip php-curl php-xml openssl -y
+
 **** upload your phpwebsite or php script to /var/www/yourwebsite-name  ****
 
 #sudo chown -R www-data:www-data /var/www/yourwebsite-name
@@ -34,9 +37,6 @@
 
 #sudo a2ensite yourwebsite-name	
 #sudo systemctl restart apache2
-****** Install php ******
-#sudo apt install libapache2-mod-php php-common php-bcmath php-mbstring php-mysql php-tokenizer php-zip php-curl php-xml openssl -y
-
 #sudo a2dissite 000-default.conf
 #sudo rm /var/www/html/index.html
 #sudo systemctl restart apache2	
